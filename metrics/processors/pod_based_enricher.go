@@ -120,6 +120,10 @@ func addPodInfo(pod *kube_api.Pod, batch *core.DataBatch) {
 
 		containerMs.Labels[core.LabelPodId.Key] = string(pod.UID)
 		containerMs.Labels[core.LabelLabels.Key] = util.LabelsToString(pod.Labels, ",")
+
+		if _, ok := containerMs.Labels[core.LabelContainerBaseImage.Key]; !ok {
+			containerMs.Labels[core.LabelContainerBaseImage.Key] = container.Image
+		}
 	}
 }
 
