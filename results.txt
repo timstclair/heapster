@@ -1,0 +1,55 @@
+container                                                                  cpu(cores) memory(MB)
+
+TEST: 30 pods x 3 nodes, 1 source per node, 3m49.248483535s
+------------------------------------------------------------------------------------------------
+[Density]
+90 percentile:
+"heapster-perf-kubelet-j30bg/heapster-test"                                0.005      18.47
+"heapster-perf-summary-vcvl6/heapster-test"                                0.004      16.84
+99 percentile: (same)
+
+[LoadCapacity]
+90 percentile:
+"heapster-perf-kubelet-j30bg/heapster-test"                                0.006      20.50
+"heapster-perf-summary-vcvl6/heapster-test"                                0.006      17.34
+99 percentile: (same)
+
+TEST: 30 pods x 3 nodes, 1 source per node, 13m42.809402175s
+------------------------------------------------------------------------------------------------
+[Density] + 10m
+90 percentile:
+"heapster-perf-kubelet-j30bg/heapster-test"                                0.004      27.45
+"heapster-perf-summary-vcvl6/heapster-test"                                0.003      24.79
+99 percentile:
+"heapster-perf-kubelet-j30bg/heapster-test"                                0.006      27.46
+"heapster-perf-summary-vcvl6/heapster-test"                                0.005      25.25
+
+[LoadCapacity]
+90 percentile:
+"heapster-perf-kubelet-j30bg/heapster-test"                                0.004      18.94
+"heapster-perf-summary-vcvl6/heapster-test"                                0.004      18.53
+99 percentile: (same)
+
+TEST: 30 pods x 3 nodes, 10 sources per node, 13m52.850112505s
+------------------------------------------------------------------------------------------------
+[Density] + 10m
+90 percentile:
+"heapster-perf-kubelet-ip0os/heapster-test"                                0.019      41.23
+"heapster-perf-summary-ihmnv/heapster-test"                                0.006      26.61
+99 percentile:
+"heapster-perf-kubelet-ip0os/heapster-test"                                0.019      42.32
+"heapster-perf-summary-ihmnv/heapster-test"                                0.008      26.67
+
+[LoadCapacity]
+90 percentile:
+"heapster-perf-kubelet-ip0os/heapster-test"                                0.011      31.59
+"heapster-perf-summary-ihmnv/heapster-test"                                0.006      18.20
+
+TEST: 30 pods x 3 nodes, 20 sources per node
+------------------------------------------------------------------------------------------------
+[Density] + 10m
+90 percentile:
+99 percentile:
+
+[LoadCapacity]
+90 percentile:

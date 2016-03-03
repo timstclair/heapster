@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: heapster-perf-kubelet
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    k8s-app: heapster-perf-kubelet
+  template:
+    metadata:
+      labels:
+        k8s-app: heapster-perf-kubelet
+    spec:
+      containers:
+      - name: heapster
+        image: heapster:perf_test
+        imagePullPolicy: Never
+        resources:
+          limits:
+            cpu: 100m
+            memory: 350Mi
+          requests:
+            cpu: 100m
+            memory: 350Mi
+        command:
+        - /heapster
+        - --source=kubernetes:https://kubernetes.default
+        - --sink=log
+        - --vmodule=*=3
+        volumeMounts:
+        - name: ssl-certs
+          mountPath: /etc/ssl/certs
+          readOnly: true
+      volumes:
+      - name: ssl-certs
+        hostPath:
+          path: /etc/ssl/certs
