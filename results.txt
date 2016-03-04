@@ -45,11 +45,42 @@ TEST: 30 pods x 3 nodes, 10 sources per node, 13m52.850112505s
 "heapster-perf-kubelet-ip0os/heapster-test"                                0.011      31.59
 "heapster-perf-summary-ihmnv/heapster-test"                                0.006      18.20
 
-TEST: 30 pods x 3 nodes, 20 sources per node
+TEST: 30 pods x 3 nodes, 20 sources per node, 13m34.660766648s
 ------------------------------------------------------------------------------------------------
 [Density] + 10m
 90 percentile:
+"heapster-perf-kubelet-vgzz0/heapster-test"                                0.035      51.24
+"heapster-perf-summary-3g24j/heapster-test"                                0.009      27.55
 99 percentile:
+"heapster-perf-kubelet-vgzz0/heapster-test"                                0.035      51.28
+"heapster-perf-summary-3g24j/heapster-test"                                0.011      27.62
 
 [LoadCapacity]
 90 percentile:
+"heapster-perf-kubelet-vgzz0/heapster-test"                                0.026      43.86
+"heapster-perf-summary-3g24j/heapster-test"                                0.009      19.64
+
+TEST: 30 pods x 3 nodes, 100 sources per node, 13m50.085140262s
+------------------------------------------------------------------------------------------------
+[Density] + 10m
+90 percentile:
+"heapster-perf-kubelet-1ln3r/heapster-test"                                0.214      152.16
+"heapster-perf-summary-57xg4/heapster-test"                                0.043      30.84
+99 percentile:
+"heapster-perf-kubelet-1ln3r/heapster-test"                                0.229      152.20
+"heapster-perf-summary-57xg4/heapster-test"                                0.047      31.00
+
+[LoadCapacity]
+90 percentile:
+"heapster-perf-kubelet-1ln3r/heapster-test"                                0.140      152.21
+"heapster-perf-summary-57xg4/heapster-test"                                0.031      41.38
+
+TEST: 30 pods x 50 nodes, 1 source per node, 32m22.336210862s
+------------------------------------------------------------------------------------------------
+[Density] + 20m
+90 percentile:
+"heapster-perf-kubelet-7jnaj/heapster"                                           0.063      233.23
+"heapster-perf-summary-jlylm/heapster"                                           0.031      215.48
+99 percentile:
+"heapster-perf-kubelet-7jnaj/heapster"                                           0.067      240.07
+"heapster-perf-summary-jlylm/heapster"                                           0.045      215.76
